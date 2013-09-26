@@ -1,0 +1,66 @@
+/*
+| ------------------------------------------
+| Glide styles
+| ------------------------------------------
+| Here are slider styles
+| 
+ */
+@import "compass/css3/transition";
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+}
+
+.slides {
+  height: 100%;
+
+  /* Simple clear fix */
+  overflow: hidden;
+
+  /**
+   * Here is CSS transitions 
+   * responsible for slider animation in modern broswers
+   */
+  @include transition(all 1s  cubic-bezier(0.550, 0.085, 0.680, 0.530));
+}
+
+  .slide {
+    height: 100%;
+    float: left;
+    clear: none;
+  }
+
+
+  .slider-arrows {}
+
+  .slider-arrow {
+    position: absolute;
+    display: block;
+    margin-bottom: -20px;
+    padding: 20px;
+  }
+
+  .slider-arrow--right { bottom: 50%; right: 30px; }
+  .slider-arrow--left { bottom: 50%; left: 30px; }
+
+
+  .slider-nav {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .slider-nav__item {
+    width: 12px;
+    height: 12px;
+    float: left;
+    clear: none;
+    display: block;
+    margin: 0 5px;
+    background: #fff;
+  }
+
+  .slider-nav__item:hover { background: #ccc; }
+  .slider-nav__item--current { background: #ccc; }

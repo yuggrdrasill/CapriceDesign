@@ -1,0 +1,106 @@
+@import "compass";
+@import "valiables";
+@import "mixins/image-util";
+
+@include set-head-bg-image("contact-h2-1",$margin:auto,$padding:4px 4px);
+@include set-head-bg-image("contact-h3-1",$margin:0 0 0 0,$padding:4px 4px);
+
+form {
+  font-size:130%;
+  padding:5px;
+  box-sizing:border-box;
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder {
+    color:    #4b4b4b;
+}
+
+$fieldBG:rgba($white,0.6);
+
+input[type="radio"] {
+  display:none;
+  width:180px;
+  height:30px;
+}
+
+input[type="radio"]+label {
+  padding:5px;
+  width:180px;
+  height:30px;
+  
+  font-size: 16px;
+  display:table-cell;
+  color:#0c0c0c;
+  background-color:$white;
+  background-color:$fieldBG;
+  text-align:center;
+  vertical-align:middle;
+  border:2px solid $mainColor;
+}
+
+input[type="radio"]+label:hover {
+  color:#0c0c0c;
+  background-color:$accentColor;
+}
+
+
+input[type="radio"]:checked+label {
+  color:$white;
+  background-color:$mainColor;
+  border:2px solid $accentColor;
+}
+
+input[type="submit"] {
+  height: 58px;
+  width: 138px;
+  border: none;
+  background-color: transparent;
+}
+
+input,textarea,select {
+  background-color:$white;
+  background-color:$fieldBG;
+}
+
+select:focus,input:focus,textarea:focus {
+  color:$white;
+  background-color:$linkColor;
+  border:2px solid $accentColor;
+}
+
+dt,dd {
+  margin-bottom:10px;
+}
+
+.element {
+  margin-bottom:10px;
+}
+
+.required-field {
+  color:lighten($mainColor,50%);
+}
+
+.contact-attention {
+  font-size:14px;
+  
+  li {
+    list-style-image:url('#{$imagesDir}contact-list-style.png');
+    margin-bottom:3px;
+  }
+}
+
+.contact-tel {
+  color:$accentColor;
+}
+
+.contact-recieve-no-container {
+  text-align:center;
+}
+
+@include set-head-bg-image("contact-receive-h2-1",$margin:auto auto 10px,$padding:4px 4px);
+
+.contact-receive-no {
+  color:$accentColor;
+  font-size:22px;
+}

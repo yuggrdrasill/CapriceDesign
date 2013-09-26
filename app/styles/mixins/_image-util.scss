@@ -1,0 +1,9 @@
+
+@mixin set-head-bg-image($backgroundImageName ,$margin:auto,$padding:0 0 0 0,$imageExtention:png, $bgImageDir:$imagesDir) {
+  .#{$backgroundImageName} {
+    background-image: url($imagesDir + $backgroundImageName + "."+ $imageExtention);
+    background-repeat:no-repeat;
+    margin:$margin;
+    padding:$padding;
+  } 
+}

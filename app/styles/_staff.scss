@@ -1,0 +1,61 @@
+@import "compass";
+@import "valiables";
+@import "mixins/image-util";
+
+$experimental-support-for-svg:true;
+$topColor:lighten($subColor,15%);
+
+@include set-head-bg-image("staff-h2-1",$margin:auto,$padding:4px 4px);
+@include set-head-bg-image("staff-h3-1",$margin:20px 0 0 40px,$padding:4px 4px);
+
+.staff{
+  font-size:18px;
+  
+  img{
+    @include single-box-shadow(rgba(30, 30, 30, .3),0,5px,5px,0)
+  }
+
+  h3 {
+    background: $subColor;
+    @include background-image(linear-gradient(top, $topColor, $subColor));
+    @include filter-gradient($topColor, $subColor, vertical);
+
+    padding:5px 20px;
+    font-size:24px;
+  }
+  
+  h4 {
+    padding-top:4px;
+    padding-bottom:4px;
+  }
+  
+  .icon-comments-alt {
+    color:$accentColor;
+    font-size:20px;
+  }
+}
+
+.staff-introduce {
+  margin-left:20px;
+}
+
+.staff-function-container {
+  margin:20px auto auto auto;
+  padding:4px;
+  
+  border-bottom:1px dotted #fcfcfc;
+  
+  span {
+    display:inline-block;
+  }
+  
+  .staff-function {
+    width:100px;
+  }
+  
+  .licence {
+    color:$accentColor;
+    padding-left:10px;
+  }
+}
+

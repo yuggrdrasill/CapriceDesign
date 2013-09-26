@@ -1,0 +1,68 @@
+
+@include set-head-bg-image("reform-h2-1",auto auto auto 20px);
+@include set-head-bg-image("reform-h2-1-txt",$padding:auto auto 10px auto);
+@include set-head-bg-image("reform-h2-2",auto auto auto 20px);
+@include set-head-bg-image("reform-h2-2-txt",$padding:auto auto 10px auto);
+
+.reform-h2-1-txt ,.reform-h2-2-txt{
+  background-color:#000c00;
+  height:100px;
+  background-position: 40px 25px;
+  @include single-box-shadow(rgba(0, 0, 0, .4),0,5px,5px,0)
+}
+
+
+@for $i from 1 through 3 {
+  @include set-head-bg-image("reform-h3-merit#{$i}");
+}
+
+.reform-head {
+  height:60px;
+  
+  background-image: url("#{$imagesDir}header-bg.png");
+  background-repeat: repeat-x;
+  margin-top: 10px;
+  
+  h2 {
+    padding-bottom:10px;
+  }
+}
+
+.reform-merit {
+  margin:0 0 20px 35px;
+  
+  h3 {
+    padding:10px;
+  }
+}
+
+.reform-steps {
+  position:relative;
+  padding:10px;
+  margin-bottom:10px;
+  
+  li {
+    display:inline-block;
+    margin:0 7px 0 14px;
+  }
+  
+  .icon-play {
+    position:absolute;
+    top:50px;
+    padding-left:7px;
+  }
+}
+
+.reform-process-contents-container {
+  margin-bottom:20px;
+}
+.reform-process-contents {
+  padding:4px 0 0 20px;
+  
+}
+
+/** reform h3 images */
+@for $i from 1 through 7 {
+  @include set-head-bg-image("reform-h3-process-step#{$i}",$margin:auto,$padding:4px 0);
+}
+

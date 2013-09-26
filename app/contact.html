@@ -1,0 +1,237 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>お問い合わせ - Caprice Design</title>
+    <meta name="description" content="札幌のCaprice Designでは、建築デザインの専門家よるデザインリフォームで、毎日がより楽しくなる住まいづくりをご提案しております。">
+    <meta name="keyword" content="住まいづくり,家づくり,リフォーム,こだわりリフォーム,デザイナーリフォーム,札幌,デザインリフォーム">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header>
+      <div class="container_24">
+        <h1>
+          <a href="/"><img src="images/logo-caprice-design.png" class="header-logo" alt="Caprice Design トップページ"></a>
+        </h1>
+        <img src="images/tel.png" class="header-tel" alt="フリーダイヤル 0120-000-1234 土曜定休 10:00 ～ 18:00">
+        <p class="header-links">
+          <a href="/"><span class="icon-arrow-right"></span>ホーム</a>
+        </p>
+      </div>
+    </header>
+    <nav>
+      <div class="container_24">
+        <ul class="nav-left">
+          <li><a href="/concept.html" class="btn-concept">コンセプト</a></li>
+          <li><a href="/reform.html" class="btn-reform">リフォーム</a></li>
+          <li><a href="/staff.html" class="btn-staff">スタッフ紹介</a></li>
+        </ul><!--
+        --><ul class="nav-right">
+          <li><a href="/catalog.html" class="btn-catalog">資料請求</a></li>
+          <li><a href="/contact.html" class="btn-contactform">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container_24">
+      <form action="contact-receive.html" methods="get" id="contact-form"class="grid_24 contents">
+        <h2 class="contact-h2-1 hide-text">お問い合わせ</h2>
+        <div class="prefix_5">
+          <div class="contact-attention element">
+            <h3 class="contact-h3-1 hide-text">お問い合わせの際の注意事項</h3>
+            <ul class="attention-list">
+              <li>項目に<span class="required-field">【必須】</span>と記載されているものは必須記入事項です。必ずご記入ください。</li>
+              <li>お問い合わせ完了後メールにて受付完了をご連絡いたします。</li>
+              <li>
+                受付メールをcontact@caprice-design.example.comより送信いたします。<br>
+                メールの指定受信や拒否設定を行っている場合、<br>
+                弊社からの返信が届かない場合がございますので受信可能な設定に変更後、<br>
+                再度こちらのフォームよりお問い合わせをお願いいたします。<br>
+              </li>
+              <li>
+                急を要するお問い合わせの場合、営業時間内（10～18時）にお電話でお問い合わせください。 <br>
+                <span class="contact-tel">お問い合わせ電話番号 00-000-1234</span>
+              </li>
+            </ul>
+          </div>
+          <fieldset class="element">
+            <legend>お問い合わせ概要 <span class="required-field">【必須】</span></legend>
+            <input id="contact-category1" type="radio" name="category" value="相談" />
+            <label for="contact-category1">とりあえず相談したい</label>
+            <input id="contact-category2" type="radio" name="category" value="見積もり"/>
+            <label for="contact-category2">見積もりしたい</label>
+            <input id="contact-category3" type="radio" name="category" value="その他"/>
+            <label for="contact-category3">その他</label>
+          </fieldset>
+          <div class="element">
+            <label for="contact-body">お問い合わせ内容 <span class="required-field">【必須】</span></label><br>
+            <textarea id="contact-body" name="contactBody" cols="75" rows="15" class="required" required="required" maxlength="1000" placeholder="お問い合わせ内容をお書きください"></textarea>
+          </div>
+            <fieldset>
+              <dl>
+              <dt class="grid_5">
+              <label for="fullname">お名前 <span class="required-field">【必須】</span></label>
+              </dt>
+              <dd class="grid_13">
+              <input id="fullname" class="required" type="text" name="firstName" required="required" maxlength="100" placeholder="例）佐藤一郎">
+              </dd>
+              <dt class="grid_5">
+              <label for="furigana">かな <span class="required-field">【必須】</span></label>
+              <dd class="grid_13">
+              <input id="furigana" class="required kana" type="text" name="furigana" required="required" maxlength="150" placeholder="例）さとういちろう">
+              </dd>
+              <dt class="grid_5">
+              <label for="email">メールアドレス <span class="required-field">【必須】</span></label></dt>
+              <dd class="grid_13">
+              <input id="email" class="required email" type="email"  required="required" placeholder="例）example@exlample.jp" size="40">
+              </dd>
+            </dl>
+            </fieldset>
+
+            <fieldset class="address">
+              <dl>
+                <dt class="grid_5">
+                <label for="phone">電話番号</label><br>
+                </dt>
+                <dd class="grid_13">
+                <input id="phone" type="tel" name="phone" class="number" pattern="\d{1,5}-\d{1,4}-\d{4,5}" title="市外局番からハイフン（-）を入れて記入してください。" placeholder="例）000-0000-0000" >
+                </dd>
+                <dt class="grid_5">
+                <label for="zipcode">郵便番号</label>
+                </dt>
+                <dd class="grid_13">
+                <input id="zipcode" class="zipcode" type="text" name="zipcode" mazlength="8" pattern="\d{3-?\d{4}}" title="3ケタ-(ハイフン) 4桁で入力してください。" placeholder="例）123-4530">
+                </dd>
+              <dt class="grid_5">
+              <label for="pref">都道府県</label><br>
+              </dt>
+              <dd class="grid_13">
+              <select id="pref" name="pref">
+                <option value="" selected>ご選択ください</option>
+                <optgroup label="北海道">
+                  <option value="01">北海道</option>
+                </optgroup>
+                <optgroup label="東北">
+                  <option value="02">青森県</option>
+                  <option value="03">岩手県</option>
+                  <option value="04">宮城県</option>
+                  <option value="05">秋田県</option>
+                  <option value="06">山形県</option>
+                  <option value="07">福島県</option>
+                </optgroup>
+                <optgroup label="関東">
+                  <option value="08">東京都</option>
+                  <option value="09">茨城県</option>
+                  <option value="10">栃木県</option>
+                  <option value="11">群馬県</option>
+                  <option value="12">埼玉県</option>
+                  <option value="13">千葉県</option>
+                  <option value="14">神奈川県</option>
+                </optgroup>
+                <optgroup label="北陸">
+                  <option value="15">富山県</option>
+                  <option value="16">石川県</option>
+                  <option value="17">福井県</option>
+                </optgroup>
+                <optgroup label="甲信越">
+                  <option value="18">新潟県</option>
+                  <option value="19">山梨県</option>
+                  <option value="20">長野県</option>
+                </optgroup>
+                <optgroup label="東海">
+                  <option value="21">岐阜県</option>
+                  <option value="22">静岡県</option>
+                  <option value="23">愛知県</option>
+                  <option value="24">三重県</option>
+                </optgroup>
+                <optgroup label="関西">
+                  <option value="25">滋賀県</option>
+                  <option value="26">京都府</option>
+                  <option value="27">大阪府</option>
+                  <option value="28">兵庫県</option>
+                  <option value="29">奈良県</option>
+                  <option value="30">和歌山県</option>
+                </optgroup>
+                <optgroup label="中四国">
+                  <option value="31">鳥取県</option>
+                  <option value="32">島根県</option>
+                  <option value="33">岡山県</option>
+                  <option value="34">広島県</option>
+                  <option value="35">山口県</option>
+                  <option value="36">徳島県</option>
+                  <option value="37">香川県</option>
+                  <option value="38">愛媛県</option>
+                  <option value="39">高知県</option>
+                </optgroup>
+                <optgroup label="九州">
+                  <option value="40">福岡県</option>
+                  <option value="41">佐賀県</option>
+                  <option value="42">長崎県</option>
+                  <option value="43">熊本県</option>
+                  <option value="44">大分県</option>
+                  <option value="45">宮崎県</option>
+                  <option value="46">鹿児島県</option>
+                </optgroup>
+                <optgroup label="沖縄">
+                  <option value="47">沖縄県</option>
+                </optgroup>
+              </select>
+              </dd>
+
+              <dt class="grid_5">
+              <label for="address1">住所</label><br>
+              </dt>
+              <dd class="grid_13">
+              <input id="address1" type="text" size="50" maxlength="80" placeholder="例)●●▲区■丁目">
+              </dd>
+              <dt class="grid_5">
+              <label for="address2">建物名とお部屋番号</label><br>
+              </dt>
+              <dd class="grid_13">
+              <input id="address2" type="text" size="50" maxlength="40" placeholder="例）マンション ●●●号">
+              </dd>
+            </dl>
+            </fieldset>
+            <div class="prefix_5">
+              <input type="submit" value="送信する" class="btn-submit">
+              <!--<span id="submit" class="btn-submit">送信する</span>-->
+            </div>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="container_24">
+        <ul>
+          <li><a href="/recruit.html" class="btn-recruit">採用情報</a></li>
+          <li><a href="/company.html" class="btn-company">会社概要</a></li>
+        </ul>
+        <img src="images/copyright.png" alt="copyright" class="copyright">
+      </div>
+    </footer>
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-37375990-2', 'github.com');
+      ga('send', 'pageview');
+    </script>
+    <!-- build:js scripts/main.js -->
+    <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

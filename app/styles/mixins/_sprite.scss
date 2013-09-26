@@ -1,0 +1,32 @@
+@mixin sprite-background-size($name, $sprites, $device-pixel-ratio: 2) {
+  $_width:  image-width(sprite-file($sprites, $name)) / $device-pixel-ratio;
+  $_height: image-height(sprite-file($sprites, $name)) / $device-pixel-ratio;
+  height: $_height;
+  width: $_width;
+}
+
+@mixin sprite-background-position($name, $sprites, $device-pixel-ratio: 2) {
+  $_pos: sprite-position($sprites, $name);
+  $_x: round(nth($_pos, 1) / $device-pixel-ratio);
+  $_y: round(nth($_pos, 2) / $device-pixel-ratio);
+  background-position: $_x $_y;
+}
+
+@mixin sprite-background-image($name, $sprites, $sprites-image, $display: block) {
+  display: $display;
+  background-image: $sprites-image;
+  background-repeat: no-repeat;
+}
+
+// shortcut
+@mixin sprite-background($name, $sprites, $sprites-image, $display: block, $device-pixel-ratio: 2) {
+  @include sprite-background-image($name, $sprites, $sprites-image, $display);
+  @include sprite-background-position($name, $sprites, $device-pixel-ratio);
+  @include sprite-background-size($name, $sprites, $device-pixel-ratio);
+}
+
+@mixin sprite-link($name,$sprites,$sprites-image,$display: block,$device-pixel-raitio: 1) {
+  @include sprite-background($name,$sprites,$sprites-image,$display,$device-pixel-raitio);
+  
+  text-indent: -9999px;
+}

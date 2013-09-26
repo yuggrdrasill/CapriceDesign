@@ -1,0 +1,189 @@
+$iconSpritePath: "../images/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
+$FontAwesomePath: "/bower_components/font-awesome/font";
+
+@import "font-awesome/scss/font-awesome";
+@import "compass/reset";
+@import "compass/utilities/";
+@import "compass/css3";
+@import "960_24_col";
+@import "mixins/sprite";
+@import "mixins/image-util";
+@import "glide";
+@import "valiables";
+
+/* util */
+
+.hide-text {
+  @include hide-text();
+}
+
+.scroll-top {
+  @include hide-text();
+  width:36px;
+  height:36px;
+  background-image:url("#{$imagesDir}scrolltop.png");
+  background-repeat: no-repeat;
+}
+
+/* tags */
+p,div,section,input,textarea,form,label {
+  @include box-sizing(border-box);
+}
+
+a {
+  @include link-colors(#00c,$linkColor,$linkColor,$linkColor,$accentColor);
+}
+
+body {
+  background-color: $mainColor;
+  color:#fdfdfd;
+  font:14px/1.6 sans-serif;
+}
+
+header {
+  position:relative;
+  
+  background-image: url("#{$imagesDir}header-bg.png");
+  background-repeat: repeat-x;
+  
+  width:100%;
+  height:60px;
+  
+  @include single-box-shadow(rgba(30, 30, 30, .3),0,5px,5px,0)
+}
+
+.top-contents {
+}
+
+.top-images {
+  margin-top: -60px;
+  
+  width:100%;
+  
+  @include single-box-shadow(rgba(0, 0, 0, .4),0,5px,5px,0);
+  
+  z-index:-1;
+}
+
+.top-image-text {
+  position:absolute;
+  top:300px;
+  left:30%;
+}
+
+.header-logo{
+  float:left;
+  
+  margin-left:20px;
+  margin-top:12px;
+  width:260px;
+  height:35px;
+  
+  @include hide-text();
+}
+
+.header-links {
+  float:right;
+  margin: 20px 20px 0px 0px;
+}
+
+.header-tel{
+  float:right;
+  
+  padding:13px 20px;
+}
+
+$sprites-btn: sprite-map("buttons/*.png" ,$layout:smart);
+$sprites-btn-image: sprite-url($sprites-btn);
+
+@each $sprite-name in sprite-names($sprites-btn) {
+  .#{$sprite-name} {
+    @include sprite-link($sprite-name,$sprites-btn,$sprites-btn-image);
+  }
+}
+
+nav {
+  background-color: $subColor;
+  
+  width:100%;
+  height:50px;
+  
+  @include single-box-shadow(rgba(0, 0, 0, .4),0,5px,5px,0);
+}
+
+.nav-left {
+  li {
+    float:left;
+  }
+}
+
+.nav-right {
+  @include clearfix;
+  
+  li {
+    float:right;
+  }
+}
+
+.news {
+  background: url("#{$imagesDir}news-bg.png") no-repeat;
+  
+  padding: 30px 16px 10px;
+  margin: -142px 0 30px 20px;
+  
+  position: relative;
+  
+  z-index: 1;
+  
+  time {
+    width:90px;
+    color:#0c0c0c;
+    
+    display:inline-block;
+  }
+}
+
+footer {
+  padding-top:7px;
+  background-color: $subColor;
+  
+  width: 100%;
+  height: 50px;
+  
+  @include clearfix;
+  
+  ul li {
+    float: left;
+  }
+  
+  .copyright {
+    float:right;
+    
+    margin-right:5px;
+  }
+}
+
+.separater {
+  background-image:url("#{$imagesDir}/images/contents-bar.png");
+  background-repeat:no-repeat;
+  height:2px;
+}
+
+/* page:concept */
+.contents {
+  margin:20px 0;
+}
+
+.contents{
+  img{
+    @include single-box-shadow(rgba(0, 0, 0, .4),0,5px,5px,0)
+  }
+}
+
+@include set-head-bg-image("concept-h2-1",10px 0);
+@include set-head-bg-image("concept-h2-2",10px 0);
+
+@import "reform";
+@import "staff";
+@import "contact";
